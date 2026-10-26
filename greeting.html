@@ -1,1 +1,201 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Haldi Arch Design</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #ffffff;
+}
+
+/* Responsive design */
+.haldi-banner {
+    position: relative;
+    width: min(100%, 750px);
+    aspect-ratio: 360 / 240;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #ffcc20;
+}
+
+.haldi-banner svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile view */
+@media screen and (max-width: 480px) {
+    .haldi-banner {
+        width: 100%;
+        aspect-ratio: 360 / 240;
+    }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 320px) {
+    .haldi-banner {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="haldi-banner">
+
+<svg viewBox="0 0 360 240"
+     preserveAspectRatio="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+    <linearGradient id="gold"
+        x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#b18a36"/>
+        <stop offset="25%" stop-color="#f8e5a0"/>
+        <stop offset="50%" stop-color="#bd9845"/>
+        <stop offset="75%" stop-color="#fff0ad"/>
+        <stop offset="100%" stop-color="#a78032"/>
+    </linearGradient>
+
+    <linearGradient id="paper"
+        x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#fffefa"/>
+        <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <filter id="shadow"
+        x="-10%" y="-10%" width="120%" height="130%">
+        <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+</defs>
+
+<!-- Shadow -->
+<path
+d="M0 240 V207
+C8 196 18 185 30 177
+C18 166 13 156 15 146
+C17 134 29 128 43 128
+L65 128
+C68 108 73 90 83 78
+C101 76 119 84 140 99
+C142 69 160 37 180 19
+C200 37 218 69 220 99
+C241 84 259 76 277 78
+C287 90 292 108 295 128
+L317 128
+C331 128 343 134 345 146
+C347 156 342 166 330 177
+C342 185 352 196 360 207
+V240 Z"
+fill="#80652b"
+opacity=".20"
+filter="url(#shadow)"
+transform="translate(0,2)"/>
+
+<!-- Outer gold arch -->
+<path
+d="M0 240 V207
+C8 196 18 185 30 177
+C18 166 13 156 15 146
+C17 134 29 128 43 128
+L65 128
+C68 108 73 90 83 78
+C101 76 119 84 140 99
+C142 69 160 37 180 19
+C200 37 218 69 220 99
+C241 84 259 76 277 78
+C287 90 292 108 295 128
+L317 128
+C331 128 343 134 345 146
+C347 156 342 166 330 177
+C342 185 352 196 360 207
+V240 Z"
+fill="url(#gold)"/>
+
+<!-- White inner arch -->
+<path
+d="M0 240 V211
+C10 199 21 188 34 178
+C23 167 18 157 19 147
+C21 138 31 132 45 132
+L69 132
+C72 111 77 93 86 82
+C103 80 120 88 143 103
+C146 74 162 44 180 27
+C198 44 214 74 217 103
+C240 88 257 80 274 82
+C283 93 288 111 291 132
+L315 132
+C329 132 339 138 341 147
+C342 157 337 167 326 178
+C339 188 350 199 360 211
+V240 Z"
+fill="url(#paper)"/>
+
+<!-- Gold outline -->
+<path
+d="M0 207
+C8 196 18 185 30 177
+C18 166 13 156 15 146
+C17 134 29 128 43 128
+L65 128
+C68 108 73 90 83 78
+C101 76 119 84 140 99
+C142 69 160 37 180 19
+C200 37 218 69 220 99
+C241 84 259 76 277 78
+C287 90 292 108 295 128
+L317 128
+C331 128 343 134 345 146
+C347 156 342 166 330 177
+C342 185 352 196 360 207"
+fill="none"
+stroke="#b9984c"
+stroke-width="2"
+stroke-linejoin="round"/>
+
+<!-- Inner highlight -->
+<path
+d="M3 207
+C11 196 21 186 33 178
+C21 167 16 157 18 147
+C20 136 30 130 44 130
+L67 130
+C70 110 75 92 85 80
+C102 78 120 86 142 101
+C145 72 161 41 180 23
+C199 41 215 72 218 101
+C240 86 258 78 275 80
+C285 92 290 110 293 130
+L316 130
+C330 130 340 136 342 147
+C344 157 339 167 327 178
+C339 186 349 196 357 207"
+fill="none"
+stroke="#fff0b5"
+stroke-width="1"
+stroke-linejoin="round"/>
+
+</svg>
+
+</div>
+
+</body>
+</html>
